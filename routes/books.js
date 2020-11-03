@@ -26,8 +26,8 @@ router.get('/edit/:_id',function(req,res){
      book
  });
 });
-router.post('/books/savechanges', (req, res){
-    books.push({...req.body, _id:`00${books.length + 1}`});
+router.post('/books/savechanges', function (req, res){
+    books.splice(req.params._id, 1);
     res.redirect('/');
     });
 
