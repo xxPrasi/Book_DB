@@ -29,8 +29,6 @@ router.get('/edit/:_id',function(req,res){
 router.post('/books/savechanges', function (req, res){
     books.splice(req.params._id, 1);
     res.redirect('/');
-    });
+});
 
-
-//bookApp\views\editBooks.ejs
 module.exports = router; 
